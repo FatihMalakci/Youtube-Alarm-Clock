@@ -1,6 +1,7 @@
 # Basic Python Youtube Alarm Clock
 
 A Basic Python Command-line Alarm Clock that opens a Youtube Music Video From its database when the given time has arrived.
+Works Fine in both *Linux* & *Windows* platforms.
 
 
 **Usage :**
