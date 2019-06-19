@@ -13,4 +13,5 @@ A Basic Python Command-line Alarm Clock that opens a Youtube Music Video From it
 
 
 **Changes**:
- - v0.1 : Added ENG localisation
+ - v0.1 : Initial Release
+ - v0.2 : Added ENG localisation
