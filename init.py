@@ -5,7 +5,7 @@ import webbrowser
 Trigger = False
 t0 = time.time()
 current = time.strftime('%H:%M:%S', time.localtime(t0))
-print("⏰ Çalar Saat Uygulamasına Hoşgeldiniz!\nŞuan Saat: {0} ⏰  ".format(current))
+print("⏰ Welcome to The Youtube Alarm Clock!\nCurrent Time is: {0} ⏰  ".format(current))
 
 def sounds():
     with open('alarms.txt','r') as f:
@@ -17,38 +17,38 @@ def sounds():
 
 def alarm(saat):
     if gun == True:
-        print("⏰ Çalar saat {0} gün {1} saat sonra {2}'da çalacak⏰".format(int(girdi / 1440),int((girdi % 1440)/60), ayar))
+        print("⏰ Alarm clock is going to ring {0} day {1} hour later at {2} ⏰".format(int(girdi / 1440),int((girdi % 1440)/60), ayar))
     else:
-        print("⏰ Çalar saat bugün saat {0}'da Çalacak ⏰".format(ayar))
+        print("⏰ Alarm clock is going to ring at {0} ⏰".format(ayar))
     while True:
         t3 = time.time()
         zaat = time.strftime('%H:%M:%S', time.localtime(saat))
         current = time.strftime('%H:%M:%S', time.localtime(t3))
         if zaat < current:
-            print('Gelecek bir tarih girmelisiniz değer yanlış kapatılıyor!')
+            print('You should enter a valid future date program is closing!')
             break
         elif zaat == current:
-            print("⏰⏰⏰ Saat {} alarm çalıyor.⏰⏰⏰".format(zaat))
+            print("⏰⏰⏰ The clock is {} alarm is ringing.⏰⏰⏰".format(zaat))
             time.sleep(3)
             sounds()
             break
         else:
-            print("Şuan saat {0} Kurulmuş Alarm: {1}".format(current,zaat))
+            print("The current time is {0} Alarm will ring at: {1}".format(current,zaat))
             time.sleep(5)
 
 while Trigger == False:
 
     try:
-        girdi = int(input("Lütfen alarmın kaç dakika sonra çalması gerektiğini yazın:\n"))
+        girdi = int(input("Please enter how much minutes later the Alarm Clock should ring:\n"))
         if isinstance(girdi,int) == True:
             if girdi < 60:
-                print("⏰ Çalar Saat {} dakika sonra çalması için ayarlandı.⏰".format(girdi))
+                print("⏰ Alarm Clock is set to ring {} minutes later.⏰".format(girdi))
                 gun = False
             elif girdi >= 1440:
-                print("⏰ Çalar Saat {0} gün {1} saat sonra çalması için ayarlandı.⏰".format(int(girdi / 1440), int((girdi % 1440)/60)))
+                print("⏰ Alarm Clock is set to ring {0} day {1} hour later.⏰".format(int(girdi / 1440), int((girdi % 1440)/60)))
                 gun = True
             elif girdi >= 60:
-                print("⏰ Çalar Saat {0} saat {1} dakika sonra çalması için ayarlandı.⏰".format(int(girdi / 60), int(girdi % 60)))
+                print("⏰ Alarm Clock is set to ring {0} hour {1} minutes later.⏰".format(int(girdi / 60), int(girdi % 60)))
                 gun = False
             time.sleep(1)
             t0 = time.time()
@@ -57,5 +57,5 @@ while Trigger == False:
             alarm(t1)
             Trigger = True
     except ValueError:
-        print("Lütfen bir sayı değeri girin.")
+        print("Please enter a valid numerical value.")
         break
