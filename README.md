@@ -1,15 +1,16 @@
 # Basic Python Youtube Alarm Clock
 
-A Basic Python Command-line Alarm Clock that opens a Youtube Music Video From its Sql database when the given time has arrived.
-
-Usage :
-
--Modify the alarms.txt file with your favorite video url's. (Make sure to they are at separate lines)
--Open init.py in your favorite CLI.
--Enter how much minutes later the alarm should ring.
--Minimize the command line and wait.
+A Basic Python Command-line Alarm Clock that opens a Youtube Music Video From its database when the given time has arrived.
 
 
+**Usage :**
 
-Changes:
- -v0.1 : Added ENG localisation
+- Modify the alarms.txt file with your favorite video url's. (Make sure to they are at separate lines)
+- Open init.py in your favorite CLI.
+- Enter how much minutes later the alarm should ring.
+- Minimize the command line and wait.
+
+
+
+**Changes**:
+ - v0.1 : Added ENG localisation
