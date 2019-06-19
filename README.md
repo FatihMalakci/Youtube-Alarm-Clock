@@ -9,7 +9,7 @@ Works Fine in both *Linux* & *Windows* platforms.
 - Modify the alarms.txt file with your favorite video url's. (Make sure they are at separate lines)
 - Open init.py in your favorite CLI.
 - Enter how much minutes later the alarm should ring.
-- Minimize the command line and wait.
+- Minimize the command line window and wait.
 
 
 
