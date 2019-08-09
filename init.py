@@ -7,6 +7,7 @@ t0 = time.time()
 current = time.strftime('%H:%M:%S', time.localtime(t0))
 print("⏰ Welcome to The Youtube Alarm Clock!\nCurrent Time is: {0} ⏰  ".format(current))
 
+## Alarm Sounds for ringing later.
 def sounds():
     with open('alarms.txt','r') as f:
         alarms = f.readlines()
@@ -14,7 +15,7 @@ def sounds():
         z = random.randrange(0,len(alarms))
         webbrowser.open(alarms[z])
 
-
+#Main alarm function that checks the time and rings when it arrives.
 def alarm(saat):
     if gun == True:
         print("⏰ Alarm clock is going to ring {0} day {1} hour later at {2} ⏰".format(int(girdi / 1440),int((girdi % 1440)/60), ayar))
