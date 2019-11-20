@@ -4,7 +4,7 @@ A Basic Python Command-line Alarm Clock that opens a Youtube Music Video From it
 Works Fine in both *Linux* & *Windows* platforms.
 
 
-**Usage :**
+**Usage : **
 
 - Modify the alarms.txt file with your favorite video url's. (Make sure they are at separate lines)
 - Open init.py in your favorite CLI.
